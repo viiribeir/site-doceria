@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> b5cc7ab576f5b22e7131220ec3fd8a3f2e72e2d2
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background-color: #f2ede4;
 }
 
-<<<<<<< HEAD
 /* Cabeçalho */
-=======
->>>>>>> b5cc7ab576f5b22e7131220ec3fd8a3f2e72e2d2
 header {
   background-color: #ad6277;
   padding: 30px 20px;
@@ -44,10 +37,7 @@ nav a:hover {
   background-color: #a45e6c;
 }
 
-<<<<<<< HEAD
 /* Container de cards */
-=======
->>>>>>> b5cc7ab576f5b22e7131220ec3fd8a3f2e72e2d2
 .container {
   padding: 40px 20px;
   display: flex;
@@ -88,7 +78,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
 /* Botões nos cards */
 .card .button {
     background-color: #ad6277;
@@ -172,31 +161,11 @@ main {
 }
 
 /* Rodapé */
-=======
-.button {
-  background-color: #ad6277;
-  color: white;
-  padding: 10px;
-  margin: 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #a45e6c;
-}
-
->>>>>>> b5cc7ab576f5b22e7131220ec3fd8a3f2e72e2d2
 footer {
   background-color: #ad6277;
   color: white;
   text-align: center;
-<<<<<<< HEAD
   padding: 20px;
-=======
-  padding: 30px 20px;
->>>>>>> b5cc7ab576f5b22e7131220ec3fd8a3f2e72e2d2
 }
 
 footer button {
@@ -208,7 +177,6 @@ footer button {
   font-weight: bold;
   cursor: pointer;
 }
-<<<<<<< HEAD
 
 /* Estilo de seleção de opções */
 .opcoes {
@@ -244,5 +212,3 @@ button.finalizar {
   cursor: pointer;
   box-shadow: 0 0 10px #fbb6ce, 0 0 20px #fbb6ce;
 }
-=======
->>>>>>> b5cc7ab576f5b22e7131220ec3fd8a3f2e72e2d2
