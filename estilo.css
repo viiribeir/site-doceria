@@ -1,10 +1,10 @@
-
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background-color: #f2ede4;
 }
 
+/* Cabeçalho */
 header {
   background-color: #ad6277;
   padding: 30px 20px;
@@ -37,6 +37,7 @@ nav a:hover {
   background-color: #a45e6c;
 }
 
+/* Container de cards */
 .container {
   padding: 40px 20px;
   display: flex;
@@ -77,25 +78,94 @@ nav a:hover {
   font-weight: bold;
 }
 
+/* Botões nos cards */
+.card .button {
+    background-color: #ad6277;
+    color: white;
+    padding: 10px;
+    margin: 15px auto; /* Centraliza horizontalmente */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Necessário para o margin auto funcionar */
+    width: fit-content; /* Faz o botão ter só o tamanho do conteúdo */
+  }
+  
+
+.card .button:hover {
+  background-color: #a45e6c;
+  box-shadow: 0 0 10px #fbb6ce, 0 0 20px #fbb6ce;
+}
+
+/* Formulários */
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+#pedidoForm {
+  display: inline-block;
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.pedido-item {
+  margin-bottom: 20px;
+}
+
+.pedido-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pedido-item select,
+.pedido-item textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Botões em formulários */
 .button {
   background-color: #ad6277;
   color: white;
-  padding: 10px;
-  margin: 15px;
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .button:hover {
-  background-color: #a45e6c;
+  background-color: #963f5f;
+  box-shadow: 0 0 10px #fbb6ce, 0 0 20px #fbb6ce;
 }
 
+/* Premium destaque */
+.premium {
+  color: #ad1457;
+  font-weight: bold;
+}
+
+/* Rodapé */
 footer {
   background-color: #ad6277;
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px;
 }
 
 footer button {
@@ -106,4 +176,39 @@ footer button {
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Estilo de seleção de opções */
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.opcao {
+  border: 2px solid #ad6277;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #ad6277;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.opcao.ativa {
+  background: #ad6277;
+  color: white;
+}
+
+/* Botão finalizar */
+button.finalizar {
+  background-color: #ad6277;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fbb6ce, 0 0 20px #fbb6ce;
 }

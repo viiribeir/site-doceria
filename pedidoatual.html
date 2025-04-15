@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitória Ribeiro Doceria</title>
+  <link rel="shortcut icon" type="imagex/png" href="imagens/logo.png.jpeg">
+  <style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f2ede4;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ad6277;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header img {
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  background-color: #ad6277;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #a45e6c;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Formulário de pedido visual tipo Goomer */
+#pedidoForm {
+  max-width: 700px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+/* Títulos */
+h2, h3 {
+  color: #ad6277;
+  margin-bottom: 20px;
+  text-align: center; /* <-- Esse é o segredo */
+
+}
+
+
+/* Cards de seleção (opções abertas) */
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.opcao {
+  border: 2px solid #ad6277;
+  border-radius: 10px;
+  padding: 12px 20px;
+  background: #fff;
+  color: #ad6277;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.opcao:hover {
+  background-color: #fce4ec;
+}
+
+.opcao.ativa {
+  background: #ad6277;
+  color: white;
+}
+
+/* Inputs adicionais */
+.linha-tempo {
+  text-align: center;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 45%;
+  display: inline-block;
+  margin: 10px 2%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-align: center;
+}
+
+/* Estilo separado só pro textarea */
+textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 10px auto 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: none;
+  display: block;
+}
+
+/* Botão de finalização */
+button.finalizar {
+  background-color: #ad6277;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 30px auto 0 auto;
+}
+
+button.finalizar:hover {
+  background-color: #963f5f;
+  transform: scale(1.05); /* Dá uma crescidinha */
+  background-color: #963f5f;
+}
+
+/* Premium destaque */
+.premium {
+  color: #ad1457;
+  font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+  background-color: #ad6277;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer button {
+  background: white;
+  color: #ad6277;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+</style>
+  
+  <body>
+  <header>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="imagens/logo.png.jpeg" alt="Vitória Ribeiro Doceria">
+      <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="pedidokit.html">Kits Festa</a>
+        <a href="bolos.html">Bolos</a>
+        <a href="bolocoracao.html">Bolo Coração</a>
+        <a href="bololetra.html">Bolo Letra</a>
+        <a href="sobrenos.html">Sobre nós</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <h2>Monte seu Bolo 🎂</h2>
+  
+  <h3>Escolha a massa:</h3>
+  <div class="opcoes" id="massa">
+    <div class="opcao" onclick="selecionar(this, 'massa')">Chocolate</div>
+    <div class="opcao" onclick="selecionar(this, 'massa')">Baunilha</div>
+    <div class="opcao" onclick="selecionar(this, 'massa')">Red velvet</div>
+    <div class="opcao" onclick="selecionar(this, 'massa')">Cacau Black</div>
+  </div>
+  
+  <h3>Escolha o recheio:</h3>
+   <div class="opcoes" id="recheio">
+  <div class="opcao" onclick="selecionar(this, 'recheio')">Brigadeiro</div>
+  <div class="opcao" onclick="selecionar(this, 'recheio')">Beijinho</div>
+  
+  <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Ninho com Morango </div>
+  <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Abacaxi </div>
+  <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Kinder Bueno </div>
+  <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Doce de leite com nozes </div>
+  <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Ouro Branco </div>
+  <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Brigadeiro com caramelo salgado </div>
+</div>
+
+   </div>
+
+  <p style="color: #ad1457; font-weight: bold; text-align: center; margin-top: -10px;">
+  ⭐ Recheios premium possuem adicional a partir de R$ 15,00
+  </p>
+
+  
+  <h3>Escolha a decoração:</h3>
+  <div class="opcoes" id="decoracao">
+    <div class="opcao" onclick="selecionar(this, 'decoracao')">Lisa Simples</div>
+    <div class="opcao" onclick="selecionar(this, 'decoracao')">Glitter</div>
+    <div class="opcao" onclick="selecionar(this, 'decoracao')">Topo de Bolo</div>
+  </div>
+  
+  <h3>Data e horário:</h3>
+  <div class="linha-tempo">
+  <input type="date" id="data" />
+  <input type="time" id="hora" />
+  </div>
+  
+  <h3>Observações:</h3>
+  <textarea id="obs" rows="3" placeholder="Ex: Sabor dos Doces, e nome do balão caso queira adicionar"></textarea>
+  
+  <button class="finalizar" onclick="enviarPedido()">Finalizar Pedido</button>
+  </body>
+  
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const tamanho = urlParams.get("kit") || "Não especificado";
+  
+    const selecao = { massa: '', recheio: '', decoracao: '' };
+
+     function selecionar(elemento, tipo) {
+          const opcoes = document.querySelectorAll(`#${tipo} .opcao`);
+          opcoes.forEach(op => op.classList.remove('ativa'));
+
+          elemento.classList.add('ativa');
+          selecao[tipo] = elemento.textContent;
+}
+  
+function enviarPedido() {
+  const data = document.getElementById("data").value;
+  const hora = document.getElementById("hora").value;
+  const obs = document.getElementById("obs").value;
+
+  if (!selecao.massa || !selecao.recheio || !selecao.decoracao || !data || !hora) {
+    alert("Por favor, preencha todas as etapas do pedido!");
+    return;
+  }
+
+  // Verifica se o recheio tem adicional
+  let adicional = "";
+  if (selecao.recheio.toLowerCase().includes("ninho com morango",
+  "abacaxi",
+  "kinder bueno",
+  "doce de leite com nozes",
+  "ouro branco",
+  "brigadeiro com caramelo salgado")) {
+    adicional = "\n💸 *Adicional de R$x pelo recheio premium.*";
+  }
+
+  const mensagem = `Olá, gostaria de fazer um pedido personalizado:
+    🎂 *Tamanho:* ${tamanho}
+    🍰 *Sabor:* ${selecao.massa}
+    🍫 *Recheio:* ${selecao.recheio}
+    ✨ *Decoração:* ${selecao.decoracao}
+    📅 *Data:* ${data}
+    ⏰ *Horário:* ${hora}
+    📝 *Observações:* ${obs}${adicional}
+
+    Muito obrigada!`;
+
+    const numero = "61991518624";
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+    }</script>
+  
+  
+  <br><br>
+  <footer>
+    <p>Alguma dúvida? Clique abaixo, e te atendemos :)</p>
+    <button onclick="window.open('https://wa.me/61991518624', '_blank')">Clique aqui</button>
+    <p style="margin-top: 10px;">Desenvolvido por Vitória Ribeiro</p>
+</footer>
+</body>
+
+</html>
+  
