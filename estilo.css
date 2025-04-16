@@ -12,7 +12,7 @@ header {
 }
 
 header img {
-  height: 80px;
+  height: 120px;
   margin-bottom: 15px;
 }
 
@@ -72,6 +72,12 @@ nav a:hover {
 .card h3 {
   margin: 10px 0 5px;
 }
+.preco-descricao {
+  font-size: 0.8em;
+   color: #ad6277;
+   font-style: italic;
+  margin-bottom: -5px;
+   }
 
 .price {
   color: #b30038;

@@ -20,7 +20,7 @@ header {
 }
 
 header img {
-  height: 100px;
+  height: 120px;
   margin-bottom: 15px;
 }
 
@@ -183,14 +183,14 @@ footer button {
   <body>
   <header>
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <img src="imagens/logo.png.jpeg" alt="Vitória Ribeiro Doceria">
+      <img src="imagens/logo2.jpeg" alt="Vitória Ribeiro Doceria">
       <nav>
         <a href="index.html">Página Inicial</a>
         <a href="pedidokit.html">Kits Festa</a>
         <a href="bolos.html">Bolos</a>
         <a href="bolocoracao.html">Bolo Coração</a>
         <a href="bololetra.html">Bolo Letra</a>
-        <a href="sobrenos.html">Sobre nós</a>
+       <!--<a href="sobrenos.html">Sobre nós</a>-->
         <a href="feedback.html">Feedback</a>
         <a href="contato.html">Contato</a>
       </nav>
@@ -210,8 +210,10 @@ footer button {
   
   <h3>Escolha o recheio:</h3>
    <div class="opcoes" id="recheio">
-  <div class="opcao" onclick="selecionar(this, 'recheio')">Brigadeiro</div>
-  <div class="opcao" onclick="selecionar(this, 'recheio')">Beijinho</div>
+  <div class="opcao" onclick="selecionar(this, 'recheio')">Brigadeiro Trufado</div>
+  <div class="opcao" onclick="selecionar(this, 'recheio')">Dois Amores</div>
+  <div class="opcao" onclick="selecionar(this, 'recheio')">Prestígio</div>
+  
   
   <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Ninho com Morango </div>
   <div class="opcao premium" onclick="selecionar(this, 'recheio')">⭐ Abacaxi </div>
@@ -224,7 +226,7 @@ footer button {
    </div>
 
   <p style="color: #ad1457; font-weight: bold; text-align: center; margin-top: -10px;">
-  ⭐ Recheios premium possuem adicional a partir de R$ 15,00
+  ⭐ Recheios premium possuem adicional de valor
   </p>
 
   
@@ -233,7 +235,9 @@ footer button {
     <div class="opcao" onclick="selecionar(this, 'decoracao')">Lisa Simples</div>
     <div class="opcao" onclick="selecionar(this, 'decoracao')">Glitter</div>
     <div class="opcao" onclick="selecionar(this, 'decoracao')">Topo de Bolo</div>
-  </div>
+    <div class="opcao" onclick="selecionar(this, 'decoracao')">Decoração Vintage (até 2 cores)</div>
+    <div class="opcao" onclick="selecionar(this, 'decoracao')">Cereja Glitterizada ou Lacinhos</div>
+    </div>
   
   <h3>Data e horário:</h3>
   <div class="linha-tempo">
@@ -279,12 +283,12 @@ function enviarPedido() {
   "doce de leite com nozes",
   "ouro branco",
   "brigadeiro com caramelo salgado")) {
-    adicional = "\n💸 *Adicional de R$x pelo recheio premium.*";
+    adicional = "\n💸 *Adicional pelo recheio premium.*";
   }
 
   const mensagem = `Olá, gostaria de fazer um pedido personalizado:
     🎂 *Tamanho:* ${tamanho}
-    🍰 *Sabor:* ${selecao.massa}
+    🍰 *Massa:* ${selecao.massa}
     🍫 *Recheio:* ${selecao.recheio}
     ✨ *Decoração:* ${selecao.decoracao}
     📅 *Data:* ${data}
